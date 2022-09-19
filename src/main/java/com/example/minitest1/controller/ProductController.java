@@ -42,7 +42,7 @@ public class ProductController {
             ex.printStackTrace();
         }
         Product product = new Product(productForm.getId(), productForm.getName(),
-                productForm.getDescription(), fileName);
+                productForm.getPrice(), fileName);
         productService.save(product);
         ModelAndView modelAndView = new ModelAndView("/product/create");
         modelAndView.addObject("productForm", new ProductForm());

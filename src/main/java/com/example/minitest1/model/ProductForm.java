@@ -5,15 +5,15 @@ import org.springframework.web.multipart.MultipartFile;
 public class ProductForm {
     private Long id;
     private String name;
-    private String description;
+    private Double price;
     private MultipartFile image;
     public ProductForm(){
     }
 
-    public ProductForm(Long id, String name, String description, MultipartFile image) {
+    public ProductForm(Long id, String name, Double price, MultipartFile image) {
         this.id = id;
         this.name = name;
-        this.description = description;
+        this.price = price;
         this.image = image;
     }
 
@@ -33,12 +33,12 @@ public class ProductForm {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
+    public Double getPrice() {
+        return price;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setPrice(Double price) {
+        this.price = price;
     }
 
     public MultipartFile getImage() {

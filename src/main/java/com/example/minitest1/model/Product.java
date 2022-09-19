@@ -9,22 +9,22 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String description;
+    private Double price;
     private String image;
 
     public Product() {
     }
 
-    public Product(Long id, String name, String description, String image) {
+    public Product(Long id, String name, Double price, String image) {
         this.id = id;
         this.name = name;
-        this.description = description;
+        this.price = price;
         this.image = image;
     }
 
     @Override
     public String toString() {
-        return String.format("Product[id=%d, name='%s', description='%s', image='%s']",id,name,description,image);
+        return String.format("Product[id=%d, name='%s', description='%s', image='%s']",id,name,price,image);
     }
 
     public Long getId() {
@@ -43,12 +43,12 @@ public class Product {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
+    public Double getPrice() {
+        return price;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setPrice(Double price) {
+        this.price = price;
     }
 
     public String getImage() {

@@ -10,14 +10,14 @@
 <table border="1">
     <tr>
         <th>Name</th>
-        <th>Description</th>
+        <th>Price</th>
         <th>Image</th>
     </tr>
     <th:block th:each="product : ${products}">
         <tr>
             <td th:text="${product.name}"></td>
-            <td th:text="${product.description}"></td>
-            <td><img width="100" height="100" th:src="@{'/image/' + ${product.image}}" alt=""></td>
+            <td th:text="${product.price}"></td>
+            <td><img width="300" height="300" th:src="@{'/image/' + ${product.image}}" alt=""></td>
             <td><a th:href="@{/edit-product/__${product.id}__ }">Edit</a></td>
             <td><a th:href="@{/delete-product/__${product.id}__ }">Delete</a></td>
         </tr>
